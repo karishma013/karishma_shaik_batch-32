@@ -1,0 +1,31 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+    </head>
+        <script>
+                let amount=prompt("enter your amount","amount");
+                amount=Number(amount);
+              let env=prompt("enter environment",['dev','test','stage','prod']);
+            
+            switch(env){
+                case 'dev':
+                   sendamount=amount+(amount*10)/100;
+                break;
+                case 'test':
+                   sendamount=amount+(amount*20)/100;
+
+                break;
+                case 'stage':
+                   sendamount=amount+(amount*30)/100;
+                break;
+                case 'prod':
+                    sendamount=amount+(amount*5)/100;
+                break;
+                default:
+                    sendamount="not an environment";
+
+            }
+            console.log(sendamount);
+            alert("your amount is "+sendamount);       
+        </script>
+        </html>
