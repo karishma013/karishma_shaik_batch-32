@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html>
+  <head></head>
+  <script>
+     let amount=prompt("enter your amount","amount");
+                amount=Number(amount);
+              let env=prompt("enter environment",['dev','test','stage','prod']).toLowerCase();             
+             
+              if(env=='dev'){
+                sendamount=amount+(amount*10)/100;
+                console.log(sendamount);
+              }
+              else if(env=='test'){
+                sendamount=amount+(amount*20)/100;
+                console.log(sendamount);
+              }
+              else if(env=='stage'){
+                sendamount=amount+(amount*30)/100;
+                console.log(sendamount);
+              }
+              else if(env=='prod'){
+                sendamount=amount+(amount*5)/100;
+                console.log(sendamount);
+              }
+             
+            alert("your amount is "+sendamount);  
+  </script>
+               
+</html>

@@ -5,7 +5,7 @@
         <script>
                 let amount=prompt("enter your amount","amount");
                 amount=Number(amount);
-              let env=prompt("enter environment",['dev','test','stage','prod']);
+              let env=prompt("enter environment",['dev','test','stage','prod']).toLowerCase();
             
             switch(env){
                 case 'dev':
