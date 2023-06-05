@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <script>
+        let hobbies=["playing volly ball","scrolling insta","reading boooks"];
+        function getAllHobbies() {
+         return hobbies;
+}
+function addHobby(newHobby) {
+  hobbies.push(newHobby);
+}
+function deleteHobby(hobbyToDelete) {
+  const index = hobbies.indexOf(hobbyToDelete);
+  if (index > -1) {
+    hobbies.splice(index, 1);
+  }
+}
+console.log(getAllHobbies());
+addHobby("cooking");
+console.log(getAllHobbies());
+deleteHobby("scrolling insta");
+console.log(getAllHobbies());
+    </script>
+</html>
