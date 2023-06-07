@@ -1,0 +1,38 @@
+<DOCTYPE html>
+    <html>
+        <head><title>Profile Info</title>
+            <script>
+                              
+                function print()
+                {
+                 var firstName=document.getElementById('fname').value;
+                 var lastname= document.getElementById('LName').value;
+                 var DOB= document.getElementById('DOB').value;
+                 var Email= document.getElementById('Email').value;
+                 var phoneNumber= document.getElementById('phNo').value;
+                 
+                  document.getElementById('output').innerHTML = "<b>First Name: </b>"+firstName+ "<br>"+
+                  "<b>LastName : </b>"+lastname+"<br>"+"<b>DOB : </b>"+DOB+"<br>"+ "<b>Email :</b>"+Email+"<br>"+"<b>phone number: </b>"+phoneNumber;
+                  }
+         </script>
+       
+        <body style="background-color: rgb(210, 242, 231);">
+            <h1>PROFILE INFORMATION</h1>
+              <form>
+                    <div id="output">
+                    
+                        firstName:  <input  type="text" id="fname"  placeholder="enter your First Name"/><br>
+                        lastName:   <input  type="text" id="LName" placeholder="enter your Last Name"/><br>
+                        DOB:        <input  type="date" id="DOB"  placeholder="enter your DOB"/><br>
+                        Email:      <input  type="text" id="Email" placeholder="enter your Email"/><br>
+                        phNo:       <input  type="number" id="phNo" placeholder="enter your phone number"/><br>
+                        <button onclick='print()' type="submit" >submit</button>
+                                    
+                                    
+                    </div>
+        </form>
+      
+        </body>
+        
+    </head>
+    </html>
