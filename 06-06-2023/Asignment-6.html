@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>PROFILE INFORMATION</title>
+        </head>
+        <script>
+              function print()
+                {
+                 var firstName=document.getElementById('fname').value;
+                 var lastname= document.getElementById('LName').value;
+                 var DOB= document.getElementById('DOB').value;
+                 var Email= document.getElementById('Email').value;
+                 var phoneNumber= document.getElementById('phNo').value;
+                 
+                  document.getElementById('output').innerHTML = "<b>First Name: </b>"+firstName+ "<br>"+
+                  "<b>LastName : </b>"+lastname+"<br>"+"<b>DOB : </b>"+DOB+"<br>"+ "<b>Email :</b>"+Email+"<br>"+"<b>phone number: </b>"+phoneNumber;
+                  }
+                  function checkbox(){
+                    var Hobbies= document.getElementById('hobby').value;
+                    document.getElementById('output').innerHTML="<b> Hobbies :<b><br>"+Hobbies;
+                  }
+        </script>
+        <body>
+            <h1>PROFILE INFORMATION</h1>
+                <form>
+                        <div id="output">
+                        
+                            firstName:  <input  type="text" id="fname"  placeholder="enter your First Name"/><br>
+                            lastName:   <input  type="text" id="LName" placeholder="enter your Last Name"/><br>
+                            DOB:        <input  type="date" id="DOB"  placeholder="enter your DOB"/><br>
+                            Email:      <input  type="text" id="Email" placeholder="enter your Email"/><br>
+                            phNo:       <input  type="number" id="phNo" placeholder="enter your phone number"/><br>
+                            <div>Hobbies:  <br> <input type="checkbox" id="hobby" onclick="checkbox()"/>volley ball
+                            <br><input type="checkbox" id="hobby" onclick="checkbox()"/>coocking
+                            <br><input type="checkbox" id="hobby" onclick="checkbox()"/>reading
+                            <br><input type="checkbox" id="hobby" onclick="checkbox()"/>Insta </div>
+                            <button onclick='print()' type="submit" >submit</button>
+                                        
+                                        
+                        </div>
+                </form>
+        </body>
+</html>
