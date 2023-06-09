@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+       <p id="demo"></p>
+    </body>
+     <script>
+            Array.prototype.getSecond=function(){
+                this.sort(function(a,b) {
+                    return a-b;
+                });
+                return this[1];
+            }
+            const arr=[10,20,45,9,18];
+            document.getElementById("demo").innerHTML =arr.getSecond();
+     </script>
+
+ </html>
