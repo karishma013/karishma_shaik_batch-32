@@ -8,32 +8,42 @@
                 {
                  var firstName=document.getElementById('fname').value;
                  var lastname= document.getElementById('LName').value;
+                 var gender=document.querySelector('input[name="gender"]:checked').value;
                  var DOB= document.getElementById('DOB').value;
                  var Email= document.getElementById('Email').value;
                  var phoneNumber= document.getElementById('phNo').value;
-                 
+                 var hobbies=[];
+                 var hobby = document.querySelectorAll('input[type="checkbox"]:checked');
+                 for (var i = 0; i < hobby.length; i++) {
+                         hobbies.push(hobby[i].value);
+                      }
                   document.getElementById('output').innerHTML = "<b>First Name: </b>"+firstName+ "<br>"+
-                  "<b>LastName : </b>"+lastname+"<br>"+"<b>DOB : </b>"+DOB+"<br>"+ "<b>Email :</b>"+Email+"<br>"+"<b>phone number: </b>"+phoneNumber;
+                  "<b>LastName : </b>"+lastname+"<br>"+"<b>DOB : </b>"+DOB+"<br>"+ "<b>Email :</b>"+Email+"<br>"+"<b>phone number: </b>"+phoneNumber+
+                  "<br><b>Gender: </b>" + gender + "<br>" +"<b>Hobbies: </b>" + hobbies.join(", ");
                   }
-                  function checkbox(){
-                    var Hobbies= document.getElementById('hobby').value;
-                    document.getElementById('output').innerHTML="<b> Hobbies :<b><br>"+Hobbies;
-                  }
+                  
         </script>
-        <body>
+        <body style="background-color: rgb(210, 242, 231);">
             <h1>PROFILE INFORMATION</h1>
                 <form>
                         <div id="output">
                         
-                            firstName:  <input  type="text" id="fname"  placeholder="enter your First Name"/><br>
-                            lastName:   <input  type="text" id="LName" placeholder="enter your Last Name"/><br>
+                            FirstName:  <input  type="text" id="fname"  placeholder="enter your First Name"/><br>
+                            LastName:   <input  type="text" id="LName" placeholder="enter your Last Name"/><br>
+                            Gender:
+                            <input type="radio" id="male" name="gender" value="male"/>Male
+                            <input type="radio" id="Female" name="gender" value="Female"/>Female
+                            <input type="radio" id="Other" name="gender" value="Other"/>Other
+                            <br>
                             DOB:        <input  type="date" id="DOB"  placeholder="enter your DOB"/><br>
                             Email:      <input  type="text" id="Email" placeholder="enter your Email"/><br>
-                            phNo:       <input  type="number" id="phNo" placeholder="enter your phone number"/><br>
-                            <div>Hobbies:  <br> <input type="checkbox" id="hobby" onclick="checkbox()"/>volley ball
-                            <br><input type="checkbox" id="hobby" onclick="checkbox()"/>coocking
-                            <br><input type="checkbox" id="hobby" onclick="checkbox()"/>reading
-                            <br><input type="checkbox" id="hobby" onclick="checkbox()"/>Insta </div>
+                            phoneNo:       <input  type="number" id="phNo" placeholder="enter your phone number"/><br>
+                            <div>Hobbies:  
+                                <br> <input type="checkbox" id="volly"/>volley ball
+                                <br><input type="checkbox" id="cooking" />coocking
+                                <br><input type="checkbox" id="reading" />reading
+                                <br><input type="checkbox" id="insta" />Insta 
+                          </div>
                             <button onclick='print()' type="submit" >submit</button>
                                         
                                         
